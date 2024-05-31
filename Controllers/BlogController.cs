@@ -19,9 +19,9 @@ namespace BlogApi.Controllers
         }
 
         [HttpGet("users")]
-        public async Task<ActionResult<IEnumerable<UserModel>>> GetUsers()
+        public async Task<ActionResult<List<UserModel>>> GetUsers()
         {
-            var users = _userService.GetAllUser();
+            List<UserModel> users =(List<UserModel>) await  _userService.GetAllUser();
             return Ok(users);
         }
 

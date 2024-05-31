@@ -5,7 +5,7 @@ namespace BlogApi.BLL.Interfaces
 {
     public interface IUserService
     {
-        Task<IEnumerable<List<UserModel>>> GetAllUser();
+		Task<List<UserModel>> GetAllUser();
         //Task<UserModel> GetByIdAsync(int id);
         //Task AddAsync(UserModel payload);
         //Task UpdateAsync(UserModel payload);
