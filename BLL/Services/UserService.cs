@@ -18,10 +18,10 @@ namespace BlogApi.BLL.Services
             _mapper = mapper;
         }
 
-        public async Task<IEnumerable<List<UserModel>>> GetAllUser()
+        public async Task<List<UserModel>> GetAllUser()
         {
             List<User> Users = (List<User>)await _userRepository.GetAllAsync();
-            return (IEnumerable<List<UserModel>>)_mapper.Map<IEnumerable<UserModel>>(Users);
+            return _mapper.Map<List<UserModel>>(Users);
         }
 
         //public Task<IEnumerable<UserModel>> GetAllUser()
